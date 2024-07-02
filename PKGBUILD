@@ -9,11 +9,15 @@ url="https://github.com/robertknight/$pkgname"
 license=(MIT Apache-2.0)
 depends=(gcc-libs
          glibc)
-makedepends=(cargo-nightly)
+makedepends=(rustup)
 _tag="$pkgname-cli-v$pkgver"
 _archive="$pkgname-$_tag"
 source=("$url/archive/$_tag/$_archive.tar.gz")
 sha256sums=('a5c9826917eea6ffea215969d448bf8409eff159dc2603bbaee37133d96c5f2a')
+
+prepare() {
+	rustup default nightly
+}
 
 build() {
 	cd "$_archive"
