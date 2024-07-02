@@ -9,7 +9,7 @@ url="https://github.com/robertknight/$pkgname"
 license=(MIT Apache-2.0)
 depends=(gcc-libs
          glibc)
-makedepends=(cargo)
+makedepends=(cargo-nightly)
 _tag="$pkgname-cli-v$pkgver"
 _archive="$pkgname-$_tag"
 source=("$url/archive/$_tag/$_archive.tar.gz")
