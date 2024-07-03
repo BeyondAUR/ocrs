@@ -2,7 +2,7 @@
 
 pkgname=ocrs
 pkgver=0.8.0
-pkgrel=1
+pkgrel=2
 pkgdesc='a modern OCR engine written in Rust'
 arch=(x86_64)
 url="https://github.com/robertknight/$pkgname"
@@ -16,17 +16,17 @@ source=("$url/archive/$_tag/$_archive.tar.gz")
 sha256sums=('a5c9826917eea6ffea215969d448bf8409eff159dc2603bbaee37133d96c5f2a')
 
 prepare() {
-	rustup default nightly
+	rustup toolchain install nightly
 }
 
 build() {
 	cd "$_archive"
-	cargo build --locked --release --all-features
+	cargo +nightly build --locked --release --all-features
 }
 
 check() {
 	cd "$_archive"
-	cargo test --locked --release --all-features
+	cargo +nightly test --locked --release --all-features
 }
 
 package() {
