@@ -1,8 +1,8 @@
 # Maintainer: Caleb Maclennan <caleb@alerque.com>
 
 pkgname=ocrs
-pkgver=0.8.0
-pkgrel=2
+pkgver=0.9.0
+pkgrel=1
 pkgdesc='a modern OCR engine written in Rust'
 arch=(x86_64)
 url="https://github.com/robertknight/$pkgname"
@@ -13,7 +13,7 @@ makedepends=(rustup)
 _tag="$pkgname-cli-v$pkgver"
 _archive="$pkgname-$_tag"
 source=("$url/archive/$_tag/$_archive.tar.gz")
-sha256sums=('a5c9826917eea6ffea215969d448bf8409eff159dc2603bbaee37133d96c5f2a')
+sha256sums=('d571f050736ca7393ce4234579b9040e07c34b001ba2223c83881195c1f3a1b6')
 
 prepare() {
 	rustup toolchain install nightly
