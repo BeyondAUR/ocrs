@@ -21,12 +21,12 @@ prepare() {
 
 build() {
 	cd "$_archive"
-	cargo +nightly build --locked --release --all-features
+	cargo +nightly build --release --all-features
 }
 
 check() {
 	cd "$_archive"
-	cargo +nightly test --locked --release --all-features
+	cargo +nightly test --release --all-features
 }
 
 package() {
