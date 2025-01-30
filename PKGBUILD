@@ -21,6 +21,7 @@ prepare() {
 
 build() {
 	cd "$_archive"
+	cargo +nightly update
 	cargo +nightly build --release --all-features
 }
 
