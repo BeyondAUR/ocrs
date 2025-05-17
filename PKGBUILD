@@ -15,19 +15,16 @@ _archive="$pkgname-$_tag"
 source=("$url/archive/$_tag/$_archive.tar.gz")
 sha256sums=('194d4dcd4b8e1af5597867a94e10655d3c6709b3c23f88953440be6c3c4ea009')
 
-prepare() {
-	rustup toolchain install nightly
-}
+RUSTUP_TOOLCHAIN=nightly-2025-02-09
 
 build() {
 	cd "$_archive"
-	cargo +nightly update
-	cargo +nightly build --release --all-features
+	cargo build --release --all-features
 }
 
 check() {
 	cd "$_archive"
-	cargo +nightly test --release --all-features
+	cargo test --release --all-features
 }
 
 package() {
