@@ -2,7 +2,7 @@
 
 pkgname=ocrs
 pkgver=0.10.2
-pkgrel=1
+pkgrel=2
 pkgdesc='a modern OCR engine written in Rust'
 arch=(x86_64)
 url="https://github.com/robertknight/$pkgname"
