@@ -15,7 +15,7 @@ _archive="$pkgname-$_tag"
 source=("$url/archive/$_tag/$_archive.tar.gz")
 sha256sums=('02848ee5fb16295e99f0ea0ecdbfc16863024798ff5dd88817556a812d4b3fe3')
 
-export RUSTUP_TOOLCHAIN=nightly-2025-05-11
+export RUSTUP_TOOLCHAIN=stable
 
 build() {
 	cd "$_archive"
