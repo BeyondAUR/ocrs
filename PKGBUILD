@@ -13,7 +13,7 @@ makedepends=(rustup)
 _tag="$pkgname-cli-v$pkgver"
 _archive="$pkgname-$_tag"
 source=("$url/archive/$_tag/$_archive.tar.gz")
-sha256sums=('6bcc16057067056d6c91ce2733bef0c9d8725d0424c6e154709909e677a71ec1')
+sha256sums=('6c78eb060c4aeaf71cd5c71421d2940f74fa374e379d3061553639be5ca250fc')
 
 export RUSTUP_TOOLCHAIN=stable
 
