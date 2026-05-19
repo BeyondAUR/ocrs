@@ -1,7 +1,7 @@
 # Maintainer: Caleb Maclennan <caleb@alerque.com>
 
 pkgname=ocrs
-pkgver=0.12.1
+pkgver=0.12.2
 pkgrel=1
 pkgdesc='a modern OCR engine written in Rust'
 arch=(x86_64)
